@@ -147,8 +147,12 @@ void mouseReleased(){
 
 // sets rotation-value
 void movieLength(float r){
-   rot = PI/(r/100);   //auf Skala anpassen, sodass aus 1-200 Minuten von der Skala 0.1-2 wird damit man es durch PI für die Rotation teilen kann
+  //auf Skala anpassen, sodass aus 1-200 Minuten von der Skala 0.1-2 wird damit man es durch PI für die Rotation teilen kann
+  //rot = PI/(r/100); 
+  
+  rot = PI/(map(r, 0, 200, 0.1, 2));
 }
+
 
 
 //predefined are the values for "comedy" and "entertaining"
